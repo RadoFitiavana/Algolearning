@@ -9,4 +9,8 @@ void readstr (char*, int) ;
 /*Clear le buffer après une lecture au clavier*/
 void clearbuffer () ;
 
+/*Lecture d'un caractère au clavier*/
+void readchar (char*) ;
+// char* : pointeur sur le caractère à lire
+
 #endif

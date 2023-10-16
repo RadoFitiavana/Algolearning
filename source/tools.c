@@ -29,13 +29,23 @@ void readstr (char* pstr, int dim)
 
     search = strchr (pstr, '\n') ; // recherche de '\n' dans pstr
 
-    if (search == NULL)
-    {
-        clearbuffer () ;
-    }
-    else
+    while (search != NULL)
     {
         printf ("L'entreée doit contenir %d caractères, veuillez réessayer", dim-1) ;
-        readstr (pstr, dim) ;
+        tem = fgets (pstr, dim, stdin) ;
+        while (tem == NULL)
+        {
+            printf ("Une erreur s'est produite, veuillez rééssayer\n") ;
+            tem = fgets (pstr, dim, stdin) ;
+            system ("clear") ;
+        }
+
+        search = strchr (pstr, '\n') ; // recherche de '\n' dans pstr
     }
 }
+
+void readchar (char* chr)
+{
+    
+}
+
