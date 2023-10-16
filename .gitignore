@@ -1,0 +1,4 @@
+source/test.c
+source/*.o
+exe/*
+test_compile.sh

@@ -1,3 +1,5 @@
+/*******************Pour tester les codes***********************/
+
 #include "../header/tools.h"
 #include <stdio.h>
 
