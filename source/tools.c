@@ -46,6 +46,12 @@ void readstr (char* pstr, int dim)
 
 void readchar (char* chr)
 {
-    
+    char* tem = fgets (chr, 1, stdin) ;
+    while (tem == NULL)
+    {
+        printf ("Une erreur s'est produite, veuillez reessayer\n") ;
+        tem = fgets (chr, 1, stdin) ;
+    }
+    clearbuffer () ;
 }
 
