@@ -55,7 +55,7 @@ int main ()
         control (name) ;
         system ("clear") ; 
         mainchoice = mainmenu () ;   
-    } 
+    }  
     
     return 0 ;
 }

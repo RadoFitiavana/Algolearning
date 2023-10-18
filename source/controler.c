@@ -1,6 +1,6 @@
 #include "../header/controler.h"
 #include "../header/tools.h"
-#include 
+#include "../header/model.h"
 
 char menu ()
 {
@@ -17,5 +17,11 @@ char menu ()
     }
 
     return choice ;
+    
+}
+
+void control (char* name)
+{
+    char choice = menu () ;
     
 }
