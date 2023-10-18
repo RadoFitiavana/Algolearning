@@ -1,4 +1,4 @@
-source/test.c
-source/*.o
-exe/*
+test.c
+*.o
+exe
 test_compile.sh
