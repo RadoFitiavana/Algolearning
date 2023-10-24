@@ -2,4 +2,4 @@ test.c
 *.o
 exe
 test_compile.sh
-data/*
+source/test
