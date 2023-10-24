@@ -24,14 +24,27 @@ char mainmenu ()
 
 char* login ()
 {
-    printf ("login is working") ;
-    return NULL ;
+    char* name = (char*) calloc (5, sizeof(char)) ;
+    name[4] = '\0' ;
+    printf ("username: ") ;
+    readstr (name, 4) ;
+
+    return name ;
 }
 
 char* newprofile ()
 {
-    printf ("newprofile is working") ;
-    return NULL ;
+    user u ;
+    printf ("entrer un username de 4 caractères: ");
+    readstr (u.username, 4) ;
+    while (finduser (u.username) == 0)
+    {
+        printf ("cet username existe déja, veuillez réessayer: ") ;
+        readstr (u.username, 4) ;
+    }
+    adduser (u) ;
+
+    return u.username ;
 }
 
 int main ()
